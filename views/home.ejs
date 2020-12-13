@@ -1,0 +1,22 @@
+<%-include("partials/header"); -%>
+  <body>
+    <h1>Home</h1>
+
+    <p><%= content%></p>
+    <%# Challenge 12 %>
+    <!-- Challenge 13  for loop-->
+    <!-- Challenge 14 -->
+    <% posts.forEach(function(post){ %>
+      <%# Challenge 15 %>
+      <h1><%=post.title%></h1>
+      <!-- Challenge 20 -->
+      <% let visibleBody = post.postBody.substring(0,100)+ " ..."; %>
+
+       <%# Challenge 21 %>
+      <p><%= visibleBody %>
+      <a href= "/posts/<%=post.title%>">Read More</a>
+      </p>
+    <% }) %>
+  </body>
+  <%# Challenge 3 %>
+<%-include("partials/footer"); -%>
