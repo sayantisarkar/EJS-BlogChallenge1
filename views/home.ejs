@@ -8,13 +8,14 @@
     <!-- Challenge 14 -->
     <% posts.forEach(function(post){ %>
       <%# Challenge 15 %>
+      <% console.log(post);%>
       <h1><%=post.title%></h1>
       <!-- Challenge 20 -->
-      <% let visibleBody = post.postBody.substring(0,100)+ " ..."; %>
+      <% let visibleBody = post.content.substring(0,100)+ " ..."; %>
 
        <%# Challenge 21 %>
       <p><%= visibleBody %>
-      <a href= "/posts/<%=post.title%>">Read More</a>
+      <a href= "/posts/<%=post._id%>">Read More</a>
       </p>
     <% }) %>
   </body>
